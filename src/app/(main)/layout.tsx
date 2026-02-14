@@ -5,8 +5,10 @@ import '@/resources/custom.css'
 import classNames from "classnames";
 
 import { baseURL, meta, fonts, style, dataStyle } from "@/resources/once-ui.config";
-import { Meta, Schema,  Column, Flex, Mask, MatrixFx} from "@once-ui-system/core";
+import { Meta, Schema, Column, Flex, Mask, MatrixFx } from "@once-ui-system/core";
 import { Providers } from '@/components/Providers';
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -57,18 +59,18 @@ export default function RootLayout({
                   
                   // Set defaults from config
                   const config = ${JSON.stringify({
-                    theme: style.theme,
-                    brand: style.brand,
-                    accent: style.accent,
-                    neutral: style.neutral,
-                    solid: style.solid,
-                    'solid-style': style.solidStyle,
-                    border: style.border,
-                    surface: style.surface,
-                    transition: style.transition,
-                    scaling: style.scaling,
-                    'viz-style': dataStyle.variant,
-                  })};
+              theme: style.theme,
+              brand: style.brand,
+              accent: style.accent,
+              neutral: style.neutral,
+              solid: style.solid,
+              'solid-style': style.solidStyle,
+              border: style.border,
+              surface: style.surface,
+              transition: style.transition,
+              scaling: style.scaling,
+              'viz-style': dataStyle.variant,
+            })};
                   
                   // Apply default values
                   Object.entries(config).forEach(([key, value]) => {
@@ -107,8 +109,8 @@ export default function RootLayout({
         />
       </head>
       <Providers>
-        <Column as="body" background="page" fillWidth margin="0" padding="0">
-          <Column style={{maxHeight: "100dvh"}} fillWidth aspectRatio="1" horizontal="center" position="absolute" top="0" left="0">
+        <Column as="body" background="page" fillWidth margin="0" padding="0" style={{ minHeight: "100vh" }}>
+          <Column style={{ maxHeight: "100dvh" }} fillWidth aspectRatio="1" horizontal="center" position="absolute" top="0" left="0">
             <Mask maxWidth="m" x={50} y={0} radius={50}>
               <MatrixFx
                 size={1.5}
@@ -119,7 +121,20 @@ export default function RootLayout({
               />
             </Mask>
           </Column>
-          {children}
+          <Header />
+          <Column
+            as="main"
+            fillWidth
+            flex={1}
+            paddingX="l"
+            paddingY="xl"
+            horizontal="center"
+          >
+            <Column maxWidth="l" fillWidth gap="xl">
+              {children}
+            </Column>
+          </Column>
+          <Footer />
         </Column>
       </Providers>
     </Flex>
