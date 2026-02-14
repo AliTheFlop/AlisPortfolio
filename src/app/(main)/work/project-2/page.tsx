@@ -6,17 +6,15 @@ import {
     Flex,
     Button,
     Column,
+    RevealFx,
+    Row,
 } from "@once-ui-system/core";
-import { useState } from 'react';
 import NextImage from "next/image";
-import { Lightbox } from "@/components/Lightbox";
 
 export default function ProjectTwo() {
-    const [lightboxImage, setLightboxImage] = useState<string | null>(null);
-
     return (
-        <Column fillWidth paddingY="xl" gap="xl" align="center">
-            <Column fillWidth paddingY="xl" gap="xl" align="center">
+        <Column fillWidth paddingY="m" gap="xl" align="center">
+            <Column fillWidth paddingY="xl" gap="l" align="center">
                 {/* Project Hero */}
                 <Column
                     fillWidth
@@ -27,16 +25,16 @@ export default function ProjectTwo() {
                 >
                     <Column gap="xs">
                         <Text variant="label-default-m" onBackground="neutral-weak">PROJECTS</Text>
-                        <Text variant="label-default-m" onBackground="neutral-weak">JANUARY 2026</Text>
+                        <Text variant="label-default-m" onBackground="neutral-weak">DECEMBER 2025</Text>
                     </Column>
 
-                    <Heading variant="display-strong-xl" wrap="balance">
-                        Brooklyn Boy Bagels
+                    <Heading variant="display-strong-l" wrap="balance">
+                        Linwood Support
                     </Heading>
 
                     <Flex gap="s" vertical="center">
                         <Text variant="body-default-m" onBackground="neutral-weak">Role:</Text>
-                        <Text variant="body-default-m">UX/UI Design & Strategy</Text>
+                        <Text variant="body-default-m">Social Media Strategy & Content</Text>
                     </Flex>
                 </Column>
 
@@ -51,8 +49,8 @@ export default function ProjectTwo() {
                         style={{ aspectRatio: '16 / 9', position: 'relative' }}
                     >
                         <NextImage
-                            src="/projects/brooklyn boy bagels/bbb_cover_big.webp"
-                            alt="Brooklyn Boy Bagels Cover"
+                            src="/projects/linwood support/linwood_cover.webp"
+                            alt="Linwood Support Cover"
                             fill
                             style={{ objectFit: 'cover' }}
                             priority
@@ -63,140 +61,67 @@ export default function ProjectTwo() {
                 {/* Content Container */}
                 <Column fillWidth maxWidth="m" gap="xl" paddingY="xl" align="start">
 
-                    {/* The Opportunity */}
+                    {/* Challenge */}
                     <Column gap="l">
-                        <Heading variant="display-strong-xs">The Opportunity</Heading>
+                        <Heading variant="display-strong-xs">The Challenge</Heading>
                         <Text variant="body-default-l" onBackground="neutral-weak">
-                            Identified a beloved local bagel brand with a weak digital storefront failing to convert their authentic NYC bagel story into online orders and foot traffic.
+                            Local NDIS provider with zero social media presence struggling to build trust with potential clients and generate referrals in a highly competitive, trust-dependent industry.
                         </Text>
                     </Column>
 
-                    {/* The Problem */}
+                    {/* Approach */}
                     <Column gap="l">
-                        <Heading variant="display-strong-xs">The Problem</Heading>
-                        <Column as="ul" gap="m" paddingLeft="l">
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Original site buried their delivery service and ordering CTA</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Lacked clear product photography at hero level</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">No urgency or conversion-focused messaging</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Muted color palette didn't match the bold, energetic brand personality</Text>
-                        </Column>
-                    </Column>
-
-                    {/* The Solution */}
-                    <Column gap="l">
-                        <Heading variant="display-strong-xs">The Solution</Heading>
+                        <Heading variant="display-strong-xs">The Approach</Heading>
                         <Text variant="body-default-l" onBackground="neutral-weak">
-                            Complete UX/UI overhaul focused on:
+                            Identified the opportunity through targeted outreach, recognizing that NDIS services require exceptional credibility-building due to the vulnerable populations they serve. Developed a comprehensive 60-day content strategy focused on:
                         </Text>
                         <Column as="ul" gap="m" paddingLeft="l">
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Immediate action: Hero CTA for "Order Fresh Bagels" + "Market Locations" above the fold</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Visual appetite appeal: High-impact product photography driving desire</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Brand personality amplification: Bold red color scheme matching their vibrant brand energy</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Conversion architecture: Clear path from awareness → desire → action</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Social proof integration: Awards and testimonials prominently featured</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Journey storytelling: "The Bagel's Journey" builds emotional connection</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Establishing thought leadership in disability support</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Humanizing the brand through authentic storytelling</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Creating educational content that demonstrated expertise</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Building community engagement organically</Text>
                         </Column>
                     </Column>
 
-                    {/* The Transformation */}
+                    {/* Execution */}
+                    <Column gap="l">
+                        <Heading variant="display-strong-xs">The Execution</Heading>
+                        <Column as="ul" gap="m" paddingLeft="l">
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Delivered 48 custom-designed posts across 8 weeks</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Maintained consistent posting schedule to build audience trust</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Created content pillars around client success, team culture, NDIS navigation, and community support</Text>
+                        </Column>
+                    </Column>
+
+                    {/* Results */}
+                    <Column gap="l">
+                        <Heading variant="display-strong-xs">The Results</Heading>
+                        <Column as="ul" gap="m" paddingLeft="l">
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">30+ followers gained in first 30 days (100% organic growth)</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Established foundational social presence from ground zero</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Client immediately engaged for paid advertising management based on content performance</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Positioned brand as approachable, trustworthy NDIS provider in local market</Text>
+                        </Column>
+                    </Column>
+
+                    {/* Bigger Picture */}
                     <Column gap="l" paddingBottom="xl">
-                        <Heading variant="display-strong-xs">The Transformation</Heading>
+                        <Heading variant="display-strong-xs">The Bigger Picture</Heading>
                         <Text variant="body-default-l" onBackground="neutral-weak">
-                            From passive informational site to active conversion machine—prioritizing the customer journey from "I'm hungry" to "I'm ordering."
+                            Transformed a digitally invisible NDIS provider into a trusted community presence, creating a sustainable platform for ongoing client acquisition and relationship building.
                         </Text>
-
-                        {/* Before & After Gallery */}
-                        <Column gap="m" paddingY="l">
-                            <Heading variant="heading-strong-l">Before & After</Heading>
-                            <Flex fillWidth gap="m" wrap>
-                                <Column
-                                    flex={1}
-                                    gap="xs"
-                                    style={{ cursor: 'pointer' }}
-                                    onClick={() => setLightboxImage('/projects/brooklyn boy bagels/bbb_old.webp')}
-                                >
-                                    <Column
-                                        fillWidth
-                                        radius="l"
-                                        overflow="hidden"
-                                        border="neutral-medium"
-                                        style={{ aspectRatio: '16/9', position: 'relative' }}
-                                    >
-                                        <NextImage
-                                            src="/projects/brooklyn boy bagels/bbb_old.webp"
-                                            alt="Before Redesign"
-                                            fill
-                                            style={{ objectFit: 'cover' }}
-                                        />
-                                        <Flex
-                                            position="absolute"
-                                            bottom="s"
-                                            left="s"
-                                            paddingX="s"
-                                            paddingY="xs"
-                                            radius="m"
-                                            background="surface"
-                                            border="neutral-medium"
-                                        >
-                                            <Text variant="label-default-s">BEFORE</Text>
-                                        </Flex>
-                                    </Column>
-                                </Column>
-                                <Column
-                                    flex={1}
-                                    gap="xs"
-                                    style={{ cursor: 'pointer' }}
-                                    onClick={() => setLightboxImage('/projects/brooklyn boy bagels/bbb_redesign.webp')}
-                                >
-                                    <Column
-                                        fillWidth
-                                        radius="l"
-                                        overflow="hidden"
-                                        border="neutral-medium"
-                                        style={{ aspectRatio: '16/9', position: 'relative' }}
-                                    >
-                                        <NextImage
-                                            src="/projects/brooklyn boy bagels/bbb_redesign.webp"
-                                            alt="After Redesign"
-                                            fill
-                                            style={{ objectFit: 'cover' }}
-                                        />
-                                        <Flex
-                                            position="absolute"
-                                            bottom="s"
-                                            left="s"
-                                            paddingX="s"
-                                            paddingY="xs"
-                                            radius="m"
-                                            background="surface"
-                                            border="neutral-medium"
-                                        >
-                                            <Text variant="label-default-s">AFTER</Text>
-                                        </Flex>
-                                    </Column>
-                                </Column>
-                            </Flex>
-                        </Column>
                     </Column>
                 </Column>
 
                 {/* CTA */}
                 <Column gap="l" paddingY="xl" align="center" horizontal="center">
                     <Heading variant="heading-strong-xl" align="center">Ready for similar results?</Heading>
-                    <Button href="/contact" variant="primary" size="l" arrowIcon>
+                    <Button href="/contact" variant="primary" size="l" arrowIcon horizontal="center">
                         Start a Project
                     </Button>
                 </Column>
 
             </Column>
-
-            {lightboxImage && (
-                <Lightbox
-                    src={lightboxImage}
-                    alt="Project Screenshot"
-                    onClose={() => setLightboxImage(null)}
-                />
-            )}
-        </Column>
+        </Column >
     );
 }

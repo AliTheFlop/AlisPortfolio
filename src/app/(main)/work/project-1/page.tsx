@@ -6,15 +6,13 @@ import {
     Flex,
     Button,
     Column,
-    RevealFx,
-    Row,
 } from "@once-ui-system/core";
 import NextImage from "next/image";
 
 export default function ProjectOne() {
     return (
-        <Column fillWidth paddingY="m" gap="xl" align="center">
-            <Column fillWidth paddingY="xl" gap="l" align="center">
+        <Column fillWidth paddingY="xl" gap="xl" align="center">
+            <Column fillWidth paddingY="xl" gap="xl" align="center">
                 {/* Project Hero */}
                 <Column
                     fillWidth
@@ -25,16 +23,16 @@ export default function ProjectOne() {
                 >
                     <Column gap="xs">
                         <Text variant="label-default-m" onBackground="neutral-weak">PROJECTS</Text>
-                        <Text variant="label-default-m" onBackground="neutral-weak">DECEMBER 2025</Text>
+                        <Text variant="label-default-m" onBackground="neutral-weak">JANUARY 2026</Text>
                     </Column>
 
-                    <Heading variant="display-strong-l" wrap="balance">
-                        Linwood Support
+                    <Heading variant="display-strong-xl" wrap="balance">
+                        Kynetic.one
                     </Heading>
 
                     <Flex gap="s" vertical="center">
                         <Text variant="body-default-m" onBackground="neutral-weak">Role:</Text>
-                        <Text variant="body-default-m">Social Media Strategy & Content</Text>
+                        <Text variant="body-default-m">Performance Marketing & Funnel Strategy</Text>
                     </Flex>
                 </Column>
 
@@ -49,8 +47,8 @@ export default function ProjectOne() {
                         style={{ aspectRatio: '16 / 9', position: 'relative' }}
                     >
                         <NextImage
-                            src="/projects/linwood support/linwood_cover.webp"
-                            alt="Linwood Support Cover"
+                            src="/projects/kynetic.one/kynetic_cover.webp"
+                            alt="Kynetic.one Cover"
                             fill
                             style={{ objectFit: 'cover' }}
                             priority
@@ -61,54 +59,70 @@ export default function ProjectOne() {
                 {/* Content Container */}
                 <Column fillWidth maxWidth="m" gap="xl" paddingY="xl" align="start">
 
-                    {/* Challenge */}
+                    {/* The Challenge */}
                     <Column gap="l">
                         <Heading variant="display-strong-xs">The Challenge</Heading>
                         <Text variant="body-default-l" onBackground="neutral-weak">
-                            Local NDIS provider with zero social media presence struggling to build trust with potential clients and generate referrals in a highly competitive, trust-dependent industry.
+                            Launch a brand-new creative agency in a saturated market with zero brand recognition, limited budget, and compete against established players for high-value service clients.
                         </Text>
                     </Column>
 
-                    {/* Approach */}
+                    {/* The Strategy */}
                     <Column gap="l">
-                        <Heading variant="display-strong-xs">The Approach</Heading>
+                        <Heading variant="display-strong-xs">The Strategy</Heading>
                         <Text variant="body-default-l" onBackground="neutral-weak">
-                            Identified the opportunity through targeted outreach, recognizing that NDIS services require exceptional credibility-building due to the vulnerable populations they serve. Developed a comprehensive 60-day content strategy focused on:
+                            Built a performance-driven acquisition funnel designed to convert cold traffic into qualified leads through strategic offer positioning and conversion optimization.
                         </Text>
-                        <Column as="ul" gap="m" paddingLeft="l">
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Establishing thought leadership in disability support</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Humanizing the brand through authentic storytelling</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Creating educational content that demonstrated expertise</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Building community engagement organically</Text>
+
+                        <Column gap="s" paddingTop="m">
+                            <Heading variant="heading-strong-m">Funnel Architecture</Heading>
+                            <Column as="ul" gap="m" paddingLeft="l">
+                                <Text as="li" variant="body-default-l" onBackground="neutral-weak"><Text weight="strong">Top of Funnel:</Text> Meta Ads targeting service-based small businesses in Sydney lacking consistent social media presence</Text>
+                                <Text as="li" variant="body-default-l" onBackground="neutral-weak"><Text weight="strong">Landing Page:</Text> Single-offer focused page (16 posts per month + free trial) eliminating decision paralysis</Text>
+                                <Text as="li" variant="body-default-l" onBackground="neutral-weak"><Text weight="strong">Conversion Path:</Text> Took prospects from "Do I need this?" → "This is exactly what I need" → "I trust these people" through strategic messaging hierarchy</Text>
+                            </Column>
+                        </Column>
+
+                        <Column gap="s" paddingTop="m">
+                            <Heading variant="heading-strong-m">Key Funnel Elements</Heading>
+                            <Column as="ul" gap="m" paddingLeft="l">
+                                <Text as="li" variant="body-default-l" onBackground="neutral-weak">Irresistible offer: 16 custom posts monthly with free trial removing financial risk</Text>
+                                <Text as="li" variant="body-default-l" onBackground="neutral-weak">Done-for-you positioning: "We create, design, schedule—you just approve" eliminating time objections</Text>
+                                <Text as="li" variant="body-default-l" onBackground="neutral-weak">Trust-building through process transparency and portfolio showcase</Text>
+                                <Text as="li" variant="body-default-l" onBackground="neutral-weak">Friction-reduced contact flow for immediate engagement</Text>
+                            </Column>
                         </Column>
                     </Column>
 
-                    {/* Execution */}
+                    {/* The Execution */}
                     <Column gap="l">
                         <Heading variant="display-strong-xs">The Execution</Heading>
                         <Column as="ul" gap="m" paddingLeft="l">
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Delivered 48 custom-designed posts across 8 weeks</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Maintained consistent posting schedule to build audience trust</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Created content pillars around client success, team culture, NDIS navigation, and community support</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Designed and built custom landing page optimized for single conversion goal</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Created and managed Meta Ads campaign targeting qualified Sydney-based business owners</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">A/B tested messaging focusing on "time-saving" vs "professional presence" positioning</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Optimized ad spend based on cost-per-qualified-lead metrics</Text>
                         </Column>
                     </Column>
 
-                    {/* Results */}
+                    {/* The Results */}
                     <Column gap="l">
                         <Heading variant="display-strong-xs">The Results</Heading>
                         <Column as="ul" gap="m" paddingLeft="l">
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">30+ followers gained in first 30 days (100% organic growth)</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Established foundational social presence from ground zero</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Client immediately engaged for paid advertising management based on content performance</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Positioned brand as approachable, trustworthy NDIS provider in local market</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">10 qualified leads generated from paid traffic in just two weeks</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">2 clients closed (20% conversion rate)</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">$600 in immediate revenue</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">$3,800+ projected 6-month LTV from initial cohort</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Immediate upsell: One client engaged for $1,000/month additional services based on initial results</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">CAC: Positive ROI within first 30 days</Text>
                         </Column>
                     </Column>
 
-                    {/* Bigger Picture */}
+                    {/* The Bigger Picture */}
                     <Column gap="l" paddingBottom="xl">
                         <Heading variant="display-strong-xs">The Bigger Picture</Heading>
                         <Text variant="body-default-l" onBackground="neutral-weak">
-                            Transformed a digitally invisible NDIS provider into a trusted community presence, creating a sustainable platform for ongoing client acquisition and relationship building.
+                            Proved a scalable acquisition model for service-based businesses—demonstrating that strategic funnel design, risk-reversal offers, and targeted local messaging can compete with established agencies even without brand recognition.
                         </Text>
                     </Column>
                 </Column>
@@ -116,12 +130,12 @@ export default function ProjectOne() {
                 {/* CTA */}
                 <Column gap="l" paddingY="xl" align="center" horizontal="center">
                     <Heading variant="heading-strong-xl" align="center">Ready for similar results?</Heading>
-                    <Button href="/contact" variant="primary" size="l" arrowIcon horizontal="center">
+                    <Button href="/contact" variant="primary" size="l" arrowIcon>
                         Start a Project
                     </Button>
                 </Column>
 
             </Column>
-        </Column >
+        </Column>
     );
 }

@@ -39,14 +39,43 @@ export default function Work() {
             {/* Projects List */}
             <Column fillWidth maxWidth="l" gap="xl" paddingY="xl">
                 <Column fillWidth gap="xl">
-                    {/* Project 1 */}
-                    <Flex fillWidth gap="l" wrap vertical="center" align="start">
+                    {/* Project 1 - Kynetic */}
+                    <Flex fillWidth gap="l" wrap paddingY="m" vertical="center" align="start">
+                        <Column flex={1} gap="m" style={{ minWidth: '300px' }}>
+                            <Heading variant="display-strong-s">Kynetic.one</Heading>
+                            <Text variant="heading-default-xs" onBackground="neutral-weak">
+                                Performance marketing and sales funnel strategy for a new creative agency.
+                            </Text>
+                            <Button href="/work/project-1" variant="secondary" arrowIcon>
+                                Read case study
+                            </Button>
+                        </Column>
+                        <Column flex={1} radius="l"
+                            style={{
+                                height: '300px',
+                                minWidth: '300px',
+                                background: 'var(--neutral-alpha-medium)',
+                                position: 'relative',
+                                overflow: 'hidden'
+                            }}
+                        >
+                            <NextImage
+                                src="/projects/kynetic.one/kynetic_cover.webp"
+                                alt="Kynetic.one Cover"
+                                fill
+                                style={{ objectFit: 'cover' }}
+                            />
+                        </Column>
+                    </Flex>
+
+                    {/* Project 2 - Linwood (Reversed) */}
+                    <Flex fillWidth gap="l" wrap paddingY="m" vertical="center" direction="row-reverse" align="start">
                         <Column flex={1} gap="m" style={{ minWidth: '300px' }}>
                             <Heading variant="display-strong-s">Linwood Support</Heading>
                             <Text variant="heading-default-xs" onBackground="neutral-weak">
                                 Transforming a digitally invisible brand into a trusted community presence for a local NDIS provider.
                             </Text>
-                            <Button href="/work/project-1" variant="secondary" arrowIcon>
+                            <Button href="/work/project-2" variant="secondary" arrowIcon>
                                 Read case study
                             </Button>
                         </Column>
@@ -68,41 +97,12 @@ export default function Work() {
                         </Column>
                     </Flex>
 
-                    {/* Project 2 - Reversed */}
-                    <Flex fillWidth gap="l" wrap vertical="center" direction="row-reverse" align="start">
+                    {/* Project 3 - Brooklyn */}
+                    <Flex fillWidth gap="l" wrap paddingY="m" vertical="center" align="start">
                         <Column flex={1} gap="m" style={{ minWidth: '300px' }}>
                             <Heading variant="display-strong-s">Brooklyn Boy Bagels</Heading>
                             <Text variant="heading-default-xs" onBackground="neutral-weak">
                                 Complete UX/UI overhaul for a beloved local bagel brand to drive online orders.
-                            </Text>
-                            <Button href="/work/project-2" variant="secondary" arrowIcon>
-                                Read case study
-                            </Button>
-                        </Column>
-                        <Column flex={1} radius="l"
-                            style={{
-                                height: '300px',
-                                minWidth: '300px',
-                                background: 'var(--neutral-alpha-medium)',
-                                position: 'relative',
-                                overflow: 'hidden'
-                            }}
-                        >
-                            <NextImage
-                                src="/projects/brooklyn boy bagels/bbb_cover_big.webp"
-                                alt="Brooklyn Boy Bagels Cover"
-                                fill
-                                style={{ objectFit: 'cover' }}
-                            />
-                        </Column>
-                    </Flex>
-
-                    {/* Project 3 */}
-                    <Flex fillWidth gap="l" wrap vertical="center" align="start">
-                        <Column flex={1} gap="m" style={{ minWidth: '300px' }}>
-                            <Heading variant="display-strong-s">Kynetic.one</Heading>
-                            <Text variant="heading-default-xs" onBackground="neutral-weak">
-                                Performance marketing and sales funnel strategy for a new creative agency.
                             </Text>
                             <Button href="/work/project-3" variant="secondary" arrowIcon>
                                 Read case study
@@ -118,8 +118,8 @@ export default function Work() {
                             }}
                         >
                             <NextImage
-                                src="/projects/kynetic.one/kynetic_cover.webp"
-                                alt="Kynetic.one Cover"
+                                src="/projects/brooklyn boy bagels/bbb_cover_big.webp"
+                                alt="Brooklyn Boy Bagels Cover"
                                 fill
                                 style={{ objectFit: 'cover' }}
                             />

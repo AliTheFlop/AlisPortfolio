@@ -7,9 +7,13 @@ import {
     Button,
     Column,
 } from "@once-ui-system/core";
+import { useState } from 'react';
 import NextImage from "next/image";
+import { Lightbox } from "@/components/Lightbox";
 
 export default function ProjectThree() {
+    const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+
     return (
         <Column fillWidth paddingY="xl" gap="xl" align="center">
             <Column fillWidth paddingY="xl" gap="xl" align="center">
@@ -27,12 +31,12 @@ export default function ProjectThree() {
                     </Column>
 
                     <Heading variant="display-strong-xl" wrap="balance">
-                        Kynetic.one
+                        Brooklyn Boy Bagels
                     </Heading>
 
                     <Flex gap="s" vertical="center">
                         <Text variant="body-default-m" onBackground="neutral-weak">Role:</Text>
-                        <Text variant="body-default-m">Performance Marketing & Funnel Strategy</Text>
+                        <Text variant="body-default-m">UX/UI Design & Strategy</Text>
                     </Flex>
                 </Column>
 
@@ -47,8 +51,8 @@ export default function ProjectThree() {
                         style={{ aspectRatio: '16 / 9', position: 'relative' }}
                     >
                         <NextImage
-                            src="/projects/kynetic.one/kynetic_cover.webp"
-                            alt="Kynetic.one Cover"
+                            src="/projects/brooklyn boy bagels/bbb_cover_big.webp"
+                            alt="Brooklyn Boy Bagels Cover"
                             fill
                             style={{ objectFit: 'cover' }}
                             priority
@@ -59,71 +63,120 @@ export default function ProjectThree() {
                 {/* Content Container */}
                 <Column fillWidth maxWidth="m" gap="xl" paddingY="xl" align="start">
 
-                    {/* The Challenge */}
+                    {/* The Opportunity */}
                     <Column gap="l">
-                        <Heading variant="display-strong-xs">The Challenge</Heading>
+                        <Heading variant="display-strong-xs">The Opportunity</Heading>
                         <Text variant="body-default-l" onBackground="neutral-weak">
-                            Launch a brand-new creative agency in a saturated market with zero brand recognition, limited budget, and compete against established players for high-value service clients.
+                            Identified a beloved local bagel brand with a weak digital storefront failing to convert their authentic NYC bagel story into online orders and foot traffic.
                         </Text>
                     </Column>
 
-                    {/* The Strategy */}
+                    {/* The Problem */}
                     <Column gap="l">
-                        <Heading variant="display-strong-xs">The Strategy</Heading>
+                        <Heading variant="display-strong-xs">The Problem</Heading>
+                        <Column as="ul" gap="m" paddingLeft="l">
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Original site buried their delivery service and ordering CTA</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Lacked clear product photography at hero level</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">No urgency or conversion-focused messaging</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Muted color palette didn't match the bold, energetic brand personality</Text>
+                        </Column>
+                    </Column>
+
+                    {/* The Solution */}
+                    <Column gap="l">
+                        <Heading variant="display-strong-xs">The Solution</Heading>
                         <Text variant="body-default-l" onBackground="neutral-weak">
-                            Built a performance-driven acquisition funnel designed to convert cold traffic into qualified leads through strategic offer positioning and conversion optimization.
+                            Complete UX/UI overhaul focused on:
                         </Text>
-
-                        <Column gap="s" paddingTop="m">
-                            <Heading variant="heading-strong-m">Funnel Architecture</Heading>
-                            <Column as="ul" gap="m" paddingLeft="l">
-                                <Text as="li" variant="body-default-l" onBackground="neutral-weak"><Text weight="strong">Top of Funnel:</Text> Meta Ads targeting service-based small businesses in Sydney lacking consistent social media presence</Text>
-                                <Text as="li" variant="body-default-l" onBackground="neutral-weak"><Text weight="strong">Landing Page:</Text> Single-offer focused page (16 posts per month + free trial) eliminating decision paralysis</Text>
-                                <Text as="li" variant="body-default-l" onBackground="neutral-weak"><Text weight="strong">Conversion Path:</Text> Took prospects from "Do I need this?" → "This is exactly what I need" → "I trust these people" through strategic messaging hierarchy</Text>
-                            </Column>
-                        </Column>
-
-                        <Column gap="s" paddingTop="m">
-                            <Heading variant="heading-strong-m">Key Funnel Elements</Heading>
-                            <Column as="ul" gap="m" paddingLeft="l">
-                                <Text as="li" variant="body-default-l" onBackground="neutral-weak">Irresistible offer: 16 custom posts monthly with free trial removing financial risk</Text>
-                                <Text as="li" variant="body-default-l" onBackground="neutral-weak">Done-for-you positioning: "We create, design, schedule—you just approve" eliminating time objections</Text>
-                                <Text as="li" variant="body-default-l" onBackground="neutral-weak">Trust-building through process transparency and portfolio showcase</Text>
-                                <Text as="li" variant="body-default-l" onBackground="neutral-weak">Friction-reduced contact flow for immediate engagement</Text>
-                            </Column>
-                        </Column>
-                    </Column>
-
-                    {/* The Execution */}
-                    <Column gap="l">
-                        <Heading variant="display-strong-xs">The Execution</Heading>
                         <Column as="ul" gap="m" paddingLeft="l">
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Designed and built custom landing page optimized for single conversion goal</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Created and managed Meta Ads campaign targeting qualified Sydney-based business owners</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">A/B tested messaging focusing on "time-saving" vs "professional presence" positioning</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Optimized ad spend based on cost-per-qualified-lead metrics</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Immediate action: Hero CTA for "Order Fresh Bagels" + "Market Locations" above the fold</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Visual appetite appeal: High-impact product photography driving desire</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Brand personality amplification: Bold red color scheme matching their vibrant brand energy</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Conversion architecture: Clear path from awareness → desire → action</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Social proof integration: Awards and testimonials prominently featured</Text>
+                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Journey storytelling: "The Bagel's Journey" builds emotional connection</Text>
                         </Column>
                     </Column>
 
-                    {/* The Results */}
-                    <Column gap="l">
-                        <Heading variant="display-strong-xs">The Results</Heading>
-                        <Column as="ul" gap="m" paddingLeft="l">
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">10 qualified leads generated from paid traffic</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">2 clients closed (20% conversion rate)</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">$600 in immediate revenue</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">$3,800+ projected 6-month LTV from initial cohort</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">Immediate upsell: One client engaged for $1,000/month additional services based on initial results</Text>
-                            <Text as="li" variant="body-default-l" onBackground="neutral-weak">CAC: Positive ROI within first 30 days</Text>
-                        </Column>
-                    </Column>
-
-                    {/* The Bigger Picture */}
+                    {/* The Transformation */}
                     <Column gap="l" paddingBottom="xl">
-                        <Heading variant="display-strong-xs">The Bigger Picture</Heading>
+                        <Heading variant="display-strong-xs">The Transformation</Heading>
                         <Text variant="body-default-l" onBackground="neutral-weak">
-                            Proved a scalable acquisition model for service-based businesses—demonstrating that strategic funnel design, risk-reversal offers, and targeted local messaging can compete with established agencies even without brand recognition.
+                            From passive informational site to active conversion machine—prioritizing the customer journey from "I'm hungry" to "I'm ordering."
                         </Text>
+
+                        {/* Before & After Gallery */}
+                        <Column gap="m" paddingY="l">
+                            <Heading variant="heading-strong-l">Before & After</Heading>
+                            <Flex fillWidth gap="m" wrap>
+                                <Column
+                                    flex={1}
+                                    gap="xs"
+                                    style={{ cursor: 'pointer' }}
+                                    onClick={() => setLightboxImage('/projects/brooklyn boy bagels/bbb_old.webp')}
+                                >
+                                    <Column
+                                        fillWidth
+                                        radius="l"
+                                        overflow="hidden"
+                                        border="neutral-medium"
+                                        style={{ aspectRatio: '16/9', position: 'relative' }}
+                                    >
+                                        <NextImage
+                                            src="/projects/brooklyn boy bagels/bbb_old.webp"
+                                            alt="Before Redesign"
+                                            fill
+                                            style={{ objectFit: 'cover' }}
+                                        />
+                                        <Flex
+                                            position="absolute"
+                                            bottom="s"
+                                            left="s"
+                                            paddingX="s"
+                                            paddingY="xs"
+                                            radius="m"
+                                            background="surface"
+                                            border="neutral-medium"
+                                        >
+                                            <Text variant="label-default-s">BEFORE</Text>
+                                        </Flex>
+                                    </Column>
+                                </Column>
+                                <Column
+                                    flex={1}
+                                    gap="xs"
+                                    style={{ cursor: 'pointer' }}
+                                    onClick={() => setLightboxImage('/projects/brooklyn boy bagels/bbb_redesign.webp')}
+                                >
+                                    <Column
+                                        fillWidth
+                                        radius="l"
+                                        overflow="hidden"
+                                        border="neutral-medium"
+                                        style={{ aspectRatio: '16/9', position: 'relative' }}
+                                    >
+                                        <NextImage
+                                            src="/projects/brooklyn boy bagels/bbb_redesign.webp"
+                                            alt="After Redesign"
+                                            fill
+                                            style={{ objectFit: 'cover' }}
+                                        />
+                                        <Flex
+                                            position="absolute"
+                                            bottom="s"
+                                            left="s"
+                                            paddingX="s"
+                                            paddingY="xs"
+                                            radius="m"
+                                            background="surface"
+                                            border="neutral-medium"
+                                        >
+                                            <Text variant="label-default-s">AFTER</Text>
+                                        </Flex>
+                                    </Column>
+                                </Column>
+                            </Flex>
+                        </Column>
                     </Column>
                 </Column>
 
@@ -136,6 +189,14 @@ export default function ProjectThree() {
                 </Column>
 
             </Column>
+
+            {lightboxImage && (
+                <Lightbox
+                    src={lightboxImage}
+                    alt="Project Screenshot"
+                    onClose={() => setLightboxImage(null)}
+                />
+            )}
         </Column>
     );
 }
