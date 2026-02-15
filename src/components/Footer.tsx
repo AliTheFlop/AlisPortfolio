@@ -25,7 +25,7 @@ export const Footer = () => {
                 </Button>
             </Flex>
             <Text variant="body-default-s" onBackground="neutral-weak">
-                © {currentYear} Portfolio. All rights reserved.
+                © {currentYear} Ali Saleh. All rights reserved.
             </Text>
         </Flex>
     );

@@ -6,18 +6,19 @@ import {
     Flex,
     Button,
     Column,
-    RevealFx,
 } from "@once-ui-system/core";
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Input } from "@/components/Input";
 
 export default function Contact() {
+    const router = useRouter();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: ''
     });
-    const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+    const [status, setStatus] = useState<'idle' | 'submitting' | 'error'>('idle');
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { id, value } = e.target;
@@ -41,8 +42,7 @@ export default function Contact() {
             });
 
             if (response.ok) {
-                setStatus('success');
-                setFormData({ name: '', email: '', message: '' });
+                router.push('/contact-thank-you');
             } else {
                 setStatus('error');
             }
@@ -108,11 +108,6 @@ export default function Contact() {
                                 Something went wrong. Please try again.
                             </Text>
                         )}
-                        {status === 'success' && (
-                            <Text variant="body-default-s" onBackground="success-weak">
-                                Message sent successfully! We'll be in touch soon.
-                            </Text>
-                        )}
 
                         <Button
                             variant="primary"
@@ -120,9 +115,9 @@ export default function Contact() {
                             fillWidth
                             type="submit"
                             loading={status === 'submitting'}
-                            disabled={status === 'submitting' || status === 'success'}
+                            disabled={status === 'submitting'}
                         >
-                            {status === 'success' ? 'Sent!' : 'Get Started'}
+                            Get Started
                         </Button>
                     </Column>
                 </Column>

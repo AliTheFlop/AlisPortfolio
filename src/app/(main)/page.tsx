@@ -161,6 +161,29 @@ export default function Home() {
         </Flex>
       </Column>
 
+      {/* Break Free Section */}
+      <Column fillWidth paddingY="xl" background="surface" align="center" horizontal="center">
+        <Column fillWidth maxWidth="m" gap="l" align="center" horizontal="center">
+          <Heading variant="display-strong-xs" align="center">
+            I'll help your business break free
+          </Heading>
+          <Column gap="m" align="center">
+            <Flex gap="m" vertical="center">
+              <Icon name="check" onBackground="brand-strong" />
+              <Text variant="heading-default-s">Strategies based on your actual situation</Text>
+            </Flex>
+            <Flex gap="m" vertical="center">
+              <Icon name="check" onBackground="brand-strong" />
+              <Text variant="heading-default-s">Work with me directly, no “agency” big-talk</Text>
+            </Flex>
+            <Flex gap="m" vertical="center">
+              <Icon name="check" onBackground="brand-strong" />
+              <Text variant="heading-default-s">Results or you get a full refund guaranteed</Text>
+            </Flex>
+          </Column>
+        </Column>
+      </Column>
+
       {/* What We've Done (Work) */}
       <Column fillWidth maxWidth="l" gap="xl" paddingY="xl">
         <Heading variant="heading-strong-l">Recent projects</Heading>

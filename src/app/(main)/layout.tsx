@@ -3,6 +3,7 @@ import '@once-ui-system/core/css/tokens.css';
 import '@/resources/custom.css'
 
 import classNames from "classnames";
+import Script from "next/script";
 
 import { baseURL, meta, fonts, style, dataStyle } from "@/resources/once-ui.config";
 import { Meta, Schema, Column, Flex, Mask, MatrixFx } from "@once-ui-system/core";
@@ -49,6 +50,21 @@ export default function RootLayout({
         path={meta.home.path}
       />
       <head>
+
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17954792952"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-17954792952');
+          `}
+        </Script>
+
         <script
           id="theme-init"
           dangerouslySetInnerHTML={{
