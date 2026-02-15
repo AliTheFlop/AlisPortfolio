@@ -68,7 +68,7 @@ const dataStyle = {
 const meta = {
   home: {
     path: "/",
-    title: "Portfolio",
+    title: "Ali Saleh - Digital marketer sydney - Your local digital marketer",
     description: "My personal portfolio showcasing my work and experience.",
     image: "/images/og/home.jpg",
     canonical: "https://portfolio.com",
