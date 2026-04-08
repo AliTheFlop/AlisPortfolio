@@ -65,7 +65,7 @@ export default function Contact() {
     return (
         <Column fillWidth paddingY="xl" gap="xl" align="center" horizontal="center">
             <Flex fillWidth maxWidth="l" gap="xl" paddingY="xl" vertical="start" wrap>
-                
+
                 {/* Left Column - Intro, Process, Trust */}
                 <Column flex={1} gap="xl" style={{ minWidth: "300px" }}>
                     <Column gap="m">
@@ -97,35 +97,35 @@ export default function Contact() {
                 </Column>
 
                 {/* Right Column - Form */}
-                <Column flex={1.5} gap="m" style={{ minWidth: "300px" }} as="form" onSubmit={handleSubmit} padding="l" background="surface" border="neutral-medium" radius="l">
+                <Column gap="m" style={{ minWidth: "300px", flex: 1.5 }} as="form" onSubmit={handleSubmit} padding="l" background="surface" border="neutral-medium" radius="l">
                     <Heading variant="heading-strong-m" paddingBottom="m">Audit Request Form</Heading>
-                    
+
                     <Flex fillWidth gap="m" wrap>
-                        <Column flex={1} style={{ minWidth: '200px'}}><Input id="name" label="Name" value={formData.name} onChange={handleChange} required /></Column>
-                        <Column flex={1} style={{ minWidth: '200px'}}><Input id="businessName" label="Business Name" value={formData.businessName} onChange={handleChange} required /></Column>
+                        <Column flex={1} style={{ minWidth: '200px' }}><Input id="name" label="Name" value={formData.name} onChange={handleChange} required /></Column>
+                        <Column flex={1} style={{ minWidth: '200px' }}><Input id="businessName" label="Business Name" value={formData.businessName} onChange={handleChange} required /></Column>
                     </Flex>
-                    
+
                     <Flex fillWidth gap="m" wrap>
-                        <Column flex={1} style={{ minWidth: '200px'}}><Input id="email" type="email" label="Email" value={formData.email} onChange={handleChange} required /></Column>
-                        <Column flex={1} style={{ minWidth: '200px'}}><Input id="phone" label="Phone" value={formData.phone} onChange={handleChange} required /></Column>
+                        <Column flex={1} style={{ minWidth: '200px' }}><Input id="email" type="email" label="Email" value={formData.email} onChange={handleChange} required /></Column>
+                        <Column flex={1} style={{ minWidth: '200px' }}><Input id="phone" label="Phone" value={formData.phone} onChange={handleChange} required /></Column>
                     </Flex>
-                    
+
                     <Input id="website" label="Website / Instagram" value={formData.website} onChange={handleChange} required />
-                    
+
                     <Flex fillWidth gap="m" wrap>
-                        <Column flex={1} style={{ minWidth: '200px'}}><Input id="industry" label="Business Type / Industry" value={formData.industry} onChange={handleChange} required /></Column>
-                        <Column flex={1} style={{ minWidth: '200px'}}><Input id="location" label="Location / Service Area" value={formData.location} onChange={handleChange} required /></Column>
+                        <Column flex={1} style={{ minWidth: '200px' }}><Input id="industry" label="Business Type / Industry" value={formData.industry} onChange={handleChange} required /></Column>
+                        <Column flex={1} style={{ minWidth: '200px' }}><Input id="location" label="Location / Service Area" value={formData.location} onChange={handleChange} required /></Column>
                     </Flex>
 
                     <Input id="service" label="What do you sell / what service do you offer?" value={formData.service} onChange={handleChange} required />
-                    
+
                     <Flex fillWidth gap="m" wrap>
-                        <Column flex={1} style={{ minWidth: '200px'}}><Input id="runningAds" label="Are you currently running ads?" placeholder="Yes / No" value={formData.runningAds} onChange={handleChange} required /></Column>
-                        <Column flex={1} style={{ minWidth: '200px'}}><Input id="adSpend" label="Monthly ad spend range" placeholder="e.g. $1k-$3k" value={formData.adSpend} onChange={handleChange} required /></Column>
+                        <Column flex={1} style={{ minWidth: '200px' }}><Input id="runningAds" label="Are you currently running ads?" placeholder="Yes / No" value={formData.runningAds} onChange={handleChange} required /></Column>
+                        <Column flex={1} style={{ minWidth: '200px' }}><Input id="adSpend" label="Monthly ad spend range" placeholder="e.g. $1k-$3k" value={formData.adSpend} onChange={handleChange} required /></Column>
                     </Flex>
 
                     <Input id="biggestIssue" label="What’s the biggest issue right now?" placeholder="(poor lead quality, agency burnout, low bookings...)" value={formData.biggestIssue} onChange={handleChange} required />
-                    
+
                     <Input id="message" label="Anything else I should know? (Optional)" lines={3} value={formData.message} onChange={handleChange} />
 
                     {status === 'error' && (
