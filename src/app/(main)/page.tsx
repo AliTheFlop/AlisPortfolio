@@ -7,10 +7,8 @@ import {
   Column,
   Flex,
   RevealFx,
-  LetterFx,
   Icon,
 } from "@once-ui-system/core";
-
 
 import NextImage from "next/image";
 
@@ -31,23 +29,47 @@ export default function Home() {
         <Column flex={1} gap="l" align="start" style={{ minWidth: "300px" }}>
           <RevealFx translateY="16" speed="fast" delay={0}>
             <Heading variant="display-strong-l" wrap="balance">
-              Helping Small Businesses Get More Business.
+              Meta Ads for Local Businesses That Need Calls, Not Clicks.
             </Heading>
           </RevealFx>
           <RevealFx translateY="16" speed="fast" delay={0.2}>
             <Text
-              variant="heading-default-xl"
+              variant="heading-default-l"
               onBackground="neutral-weak"
               wrap="balance"
             >
-              I help small businesses run marketing projects that boost
-              their revenue and get more clients.
+              No-contract Meta Ads management for local service businesses tired of ghost leads, vague reports, and agencies that vanish after the sale.
             </Text>
           </RevealFx>
           <RevealFx translateY="16" speed="fast" delay={0.4}>
-            <Button href="/contact" variant="primary" size="l" arrowIcon>
-              Start a Project
-            </Button>
+            <Flex gap="m" wrap vertical="center">
+              <Button href="/contact" variant="primary" size="l" arrowIcon>
+                Request a Free Meta Ads Audit
+              </Button>
+              <Button href="/work" variant="secondary" size="l" arrowIcon>
+                View Case Studies
+              </Button>
+            </Flex>
+          </RevealFx>
+          <RevealFx translateY="16" speed="fast" delay={0.6}>
+            <Flex gap="m" wrap vertical="center" paddingTop="m">
+              <Flex gap="xs" vertical="center">
+                <Icon name="check" size="s" onBackground="brand-strong" />
+                <Text variant="body-default-xs" onBackground="neutral-weak">No contracts</Text>
+              </Flex>
+              <Flex gap="xs" vertical="center">
+                <Icon name="check" size="s" onBackground="brand-strong" />
+                <Text variant="body-default-xs" onBackground="neutral-weak">Direct access</Text>
+              </Flex>
+              <Flex gap="xs" vertical="center">
+                <Icon name="check" size="s" onBackground="brand-strong" />
+                <Text variant="body-default-xs" onBackground="neutral-weak">Your account stays yours</Text>
+              </Flex>
+              <Flex gap="xs" vertical="center">
+                <Icon name="check" size="s" onBackground="brand-strong" />
+                <Text variant="body-default-xs" onBackground="neutral-weak">Simple reporting</Text>
+              </Flex>
+            </Flex>
           </RevealFx>
         </Column>
 
@@ -68,135 +90,166 @@ export default function Home() {
               <Flex fillWidth horizontal="between" vertical="center">
                 <Flex gap="12" vertical="center">
                   <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: 'var(--brand-solid-strong)' }} />
-                  <Text variant="heading-strong-xs">Revenue Growth</Text>
+                  <Text variant="heading-strong-xs">Meaningful Metrics</Text>
                 </Flex>
-                <Text variant="body-default-s" onBackground="neutral-weak">Last 30 days</Text>
+                <Text variant="body-default-s" onBackground="neutral-weak">This Month</Text>
               </Flex>
-              <Flex fillWidth gap="4" vertical="end" style={{ height: '120px' }}>
-                {[30, 45, 35, 60, 50, 75, 90].map((height, i) => (
-                  <div
-                    key={i}
-                    style={{
-                      flex: 1,
-                      height: `${height}%`,
-                      background: i === 6 ? 'var(--brand-solid-strong)' : 'var(--neutral-alpha-medium)',
-                      borderRadius: 'var(--radius-xs)',
-                      opacity: i === 6 ? 1 : 0.5
-                    }}
-                  />
-                ))}
-              </Flex>
-              <Flex fillWidth horizontal="between" vertical="center" paddingTop="s" borderTop="neutral-medium">
-                <Text variant="label-default-s" onBackground="neutral-weak">New Clients</Text>
-                <Text variant="heading-strong-m">+24%</Text>
+              <Flex fillWidth gap="m" direction="column">
+                <Flex fillWidth horizontal="between" paddingY="s" borderBottom="neutral-medium">
+                  <Text variant="body-default-m" onBackground="neutral-weak">Ad Spend</Text>
+                  <Text variant="heading-strong-s">$1,250</Text>
+                </Flex>
+                <Flex fillWidth horizontal="between" paddingY="s" borderBottom="neutral-medium">
+                  <Text variant="body-default-m" onBackground="brand-strong">Qualified Leads</Text>
+                  <Text variant="heading-strong-s" onBackground="brand-strong">32</Text>
+                </Flex>
+                <Flex fillWidth horizontal="between" paddingY="s" borderBottom="neutral-medium">
+                  <Text variant="body-default-m" onBackground="brand-strong">Calls Booked</Text>
+                  <Text variant="heading-strong-s" onBackground="brand-strong">18</Text>
+                </Flex>
+                <Flex fillWidth horizontal="between" paddingY="s">
+                  <Text variant="body-default-m" onBackground="neutral-alpha-weak" style={{ textDecoration: 'line-through' }}>Vanity Impressions</Text>
+                  <Text variant="heading-strong-s" onBackground="neutral-alpha-weak" style={{ textDecoration: 'line-through' }}>240,000</Text>
+                </Flex>
               </Flex>
             </Column>
           </RevealFx>
         </Column>
       </Flex>
 
-      {/* The Problem Section */}
+      {/* Pain / Identification Section */}
       <Column fillWidth maxWidth="l" gap="l" paddingY="xl" horizontal="center">
-        <Heading variant="heading-strong-l">Always On Your Mind...</Heading>
-        <Flex fillWidth wrap gap="l" horizontal="center">
-          {/* Point 1: Marketer (Stress) */}
+        <Heading variant="heading-strong-l" align="center">You didn't start your business to become a marketer.</Heading>
+        <Text variant="heading-default-m" onBackground="neutral-weak" align="center" wrap="balance" style={{ maxWidth: '600px' }}>
+          Dealing with broken campaigns, unresponsive agencies, and unpredictable cash flow isn't what you signed up for.
+        </Text>
+        <Flex fillWidth wrap gap="l" horizontal="center" paddingTop="l">
           <Column flex={1} style={{ minWidth: '250px', textAlign: 'center' }} gap="m" padding="l" background="surface" border="neutral-medium" radius="l" horizontal="center">
-            <Flex
-              width="48"
-              height="48"
-              radius="m"
-              background="neutral-alpha-medium"
-              vertical="center"
-              horizontal="center"
-            >
-              <Icon name="person" size="l" onBackground="neutral-strong" />
-            </Flex>
-            <Column gap="xs" horizontal="center">
-              <Heading variant="heading-strong-s">You didn't start your business to become a marketer.</Heading>
-              <Text variant="body-default-s" onBackground="neutral-weak">
-                Marketing takes too much time away from your craft.
-              </Text>
-            </Column>
+             <Heading variant="heading-strong-s">The Agency Runaround</Heading>
+             <Text variant="body-default-s" onBackground="neutral-weak">
+                Agencies love dashboards and impressions, but you care about calls and bookings. You're tired of talking to junior account managers.
+             </Text>
           </Column>
 
-          {/* Point 2: Money */}
           <Column flex={1} style={{ minWidth: '250px', textAlign: 'center' }} gap="m" padding="l" background="surface" border="neutral-medium" radius="l" horizontal="center">
-            <Flex
-              width="48"
-              height="48"
-              radius="m"
-              background="neutral-alpha-medium"
-              vertical="center"
-              horizontal="center"
-            >
-              <Icon name="cash" size="l" onBackground="neutral-strong" />
-            </Flex>
-            <Column gap="xs" horizontal="center">
-              <Heading variant="heading-strong-s">Your next client could be weeks away.</Heading>
-              <Text variant="body-default-s" onBackground="neutral-weak">
-                Inconsistent lead flow makes revenue unpredictable and stressful.
-              </Text>
-            </Column>
+             <Heading variant="heading-strong-s">The Ghost Lead Trap</Heading>
+             <Text variant="body-default-s" onBackground="neutral-weak">
+                Meta numbers can look fine while the phone stays quiet. Cheap leads often ghost, haggle on price, or go nowhere.
+             </Text>
           </Column>
 
-          {/* Point 3: Time */}
           <Column flex={1} style={{ minWidth: '250px', textAlign: 'center' }} gap="m" padding="l" background="surface" border="neutral-medium" radius="l" horizontal="center">
-            <Flex
-              width="48"
-              height="48"
-              radius="m"
-              background="neutral-alpha-medium"
-              vertical="center"
-              horizontal="center"
-            >
-              <Icon name="clock" size="l" onBackground="neutral-strong" />
-            </Flex>
-            <Column gap="xs" horizontal="center">
-              <Heading variant="heading-strong-s">You hate being a <br />full-time CEO.</Heading>
-              <Text variant="body-default-s" onBackground="neutral-weak">
-                Managing operations shouldn't consume 100% of your freedom.
-              </Text>
-            </Column>
+             <Heading variant="heading-strong-s">The Expensive Lesson</Heading>
+             <Text variant="body-default-s" onBackground="neutral-weak">
+                Boosting posts and running generic ads wastes money. You don't want to be locked into another 6-month contract with zero return.
+             </Text>
           </Column>
         </Flex>
       </Column>
 
-      {/* Break Free Section */}
-      <Column fillWidth paddingY="xl" background="surface" align="center" horizontal="center">
-        <Column fillWidth maxWidth="m" gap="l" align="center" horizontal="center">
+      {/* Mechanism Section */}
+      <Column fillWidth paddingY="xl" background="surface" align="center" horizontal="center" radius="l">
+        <Column fillWidth maxWidth="l" gap="xl" align="center" horizontal="center" paddingX="l">
           <Heading variant="display-strong-xs" align="center">
-            I'll help your business break free
+            Why most local Meta campaigns fail.
           </Heading>
-          <Column gap="m" align="center">
-            <Flex gap="m" vertical="center">
-              <Icon name="check" onBackground="brand-strong" />
-              <Text variant="heading-default-s">Strategies based on your actual situation</Text>
-            </Flex>
-            <Flex gap="m" vertical="center">
-              <Icon name="check" onBackground="brand-strong" />
-              <Text variant="heading-default-s">Work with me directly, no “agency” big-talk</Text>
-            </Flex>
-            <Flex gap="m" vertical="center">
-              <Icon name="check" onBackground="brand-strong" />
-              <Text variant="heading-default-s">Results or you get a full refund guaranteed</Text>
-            </Flex>
-          </Column>
+          
+          <Flex fillWidth wrap gap="xl" vertical="stretch" paddingTop="l">
+            <Column flex={1} gap="m" padding="xl" background="page" border="neutral-medium" radius="l" style={{ minWidth: '300px' }}>
+              <Heading variant="heading-strong-m" onBackground="neutral-weak">Part 1: The Ghost Lead Loop</Heading>
+              <Text variant="body-default-m" onBackground="neutral-weak">The broken pattern most agencies run:</Text>
+              <Column gap="s" paddingTop="m">
+                <Flex gap="s" vertical="center"><Icon name="close" size="s" onBackground="danger-strong" /><Text variant="body-default-s">Broad targeting and generic messaging</Text></Flex>
+                <Flex gap="s" vertical="center"><Icon name="close" size="s" onBackground="danger-strong" /><Text variant="body-default-s">Low-friction lead forms that invite time-wasters</Text></Flex>
+                <Flex gap="s" vertical="center"><Icon name="close" size="s" onBackground="danger-strong" /><Text variant="body-default-s">Outsourced account management</Text></Flex>
+                <Flex gap="s" vertical="center"><Icon name="close" size="s" onBackground="danger-strong" /><Text variant="body-default-s">Reporting that looks busy but says nothing useful</Text></Flex>
+              </Column>
+            </Column>
+
+            <Column flex={1} gap="m" padding="xl" background="brand-alpha-weak" border="brand-medium" radius="l" style={{ minWidth: '300px' }}>
+              <Heading variant="heading-strong-m" onBackground="brand-strong">Part 2: The Local Intent Filter</Heading>
+              <Text variant="body-default-m" onBackground="neutral-strong">Our anti-agency approach:</Text>
+              <Column gap="s" paddingTop="m">
+                <Flex gap="s" vertical="center"><Icon name="check" size="s" onBackground="brand-strong" /><Text variant="body-default-s">Stronger local positioning & service-specific offers</Text></Flex>
+                <Flex gap="s" vertical="center"><Icon name="check" size="s" onBackground="brand-strong" /><Text variant="body-default-s">Qualifying questions & friction to block junk leads</Text></Flex>
+                <Flex gap="s" vertical="center"><Icon name="check" size="s" onBackground="brand-strong" /><Text variant="body-default-s">Direct specialist oversight by the person doing the work</Text></Flex>
+                <Flex gap="s" vertical="center"><Icon name="check" size="s" onBackground="brand-strong" /><Text variant="body-default-s">Simple reporting: spend, leads, calls, bookings</Text></Flex>
+              </Column>
+            </Column>
+          </Flex>
         </Column>
       </Column>
 
-      {/* What We've Done (Work) */}
+      {/* Trust Stack / Why This Is Different */}
+      <Column fillWidth maxWidth="l" gap="l" paddingY="xl" horizontal="center">
+        <Heading variant="heading-strong-l" align="center">A direct response to agency trauma.</Heading>
+        <Text variant="heading-default-m" onBackground="neutral-weak" align="center" wrap="balance" style={{ maxWidth: '600px' }}>
+           Why this specialist service feels significantly safer than a normal marketing agency.
+        </Text>
+        <Flex fillWidth wrap gap="l" horizontal="center" paddingTop="l">
+           {[
+             { title: "No Contracts", desc: "Month-to-month by default. If the ads don't work, you shouldn't be trapped paying a retainer." },
+             { title: "Your Account Stays Yours", desc: "You own the ad account, the pixel, and the data. No holding your assets hostage if you leave." },
+             { title: "Direct Communication", desc: "No junior account-manager handoffs. You talk directly with the specialist building your campaigns." },
+             { title: "Built for Local Services", desc: "Not ecommerce brands, not software companies. Built specifically for trades and local businesses." }
+           ].map((item, index) => (
+             <Column key={index} flex={1} style={{ minWidth: '200px' }} gap="s" padding="m" border="neutral-medium" radius="m">
+               <Heading variant="heading-strong-s">{item.title}</Heading>
+               <Text variant="body-default-s" onBackground="neutral-weak">{item.desc}</Text>
+             </Column>
+           ))}
+        </Flex>
+      </Column>
+
+      {/* What You Actually Get */}
+      <Column fillWidth maxWidth="m" paddingY="xl" gap="l">
+         <Heading variant="heading-strong-l" align="center">What you actually get.</Heading>
+         <Text variant="heading-default-m" onBackground="neutral-weak" align="center">Plain English. No fluff.</Text>
+         <Column fillWidth gap="xs" background="surface" padding="xl" radius="l" border="neutral-medium" marginTop="m">
+            {[
+              "Account audit and clean technical setup",
+              "Offer and angle selection based on your market",
+              "Full campaign build and management",
+              "Ad copy and creative direction",
+              "Qualifying lead form strategy to filter junk",
+              "Landing-page guidance (where needed)",
+              "Weekly optimization to protect your budget",
+              "Simple monthly reporting (spend vs leads vs calls)"
+            ].map((feature, i) => (
+              <Flex key={i} gap="m" vertical="center" paddingY="s" borderBottom={i < 7 ? "neutral-weak" : undefined}>
+                 <Icon name="check" size="m" onBackground="brand-strong" />
+                 <Text variant="body-default-m">{feature}</Text>
+              </Flex>
+            ))}
+         </Column>
+      </Column>
+
+      {/* Case Study / Proof Section */}
       <Column fillWidth maxWidth="l" gap="xl" paddingY="xl">
-        <Heading variant="heading-strong-l">Recent projects</Heading>
-        <Column fillWidth gap="xl">
+        <Column gap="s" horizontal="center">
+          <Heading variant="heading-strong-l" align="center">Real results.</Heading>
+          <Text variant="heading-default-m" onBackground="neutral-weak" align="center">
+            Proof that focused offers, better positioning, and qualified traffic work.
+          </Text>
+        </Column>
+
+        <Column fillWidth gap="xl" paddingTop="l">
           {/* Project 1 - Kynetic */}
           <Flex fillWidth gap="l" wrap paddingY="m" vertical="center" align="start">
             <Column flex={1} gap="m" style={{ minWidth: '300px' }}>
+              <Text variant="label-strong-s" onBackground="brand-strong">META ADS / ACQUISITION PROOF</Text>
               <Heading variant="display-strong-s">Kynetic.one</Heading>
-              <Text variant="heading-default-xs" onBackground="neutral-weak">
-                Launching a performance marketing agency with a high-converting acquisition funnel.
+              <Text variant="body-default-m" onBackground="neutral-weak">
+                <strong>Challenge:</strong> Launching without existing brand recognition.
               </Text>
-              <Button href="/work/project-1" variant="secondary" arrowIcon>
-                Read case study
+              <Text variant="body-default-m" onBackground="neutral-weak">
+                <strong>What changed:</strong> Focused offer + Meta traffic + targeted landing page strategy.
+              </Text>
+              <Text variant="body-default-m" onBackground="neutral-strong">
+                <strong>Why it matters:</strong> Generates qualified leads by leveraging high-friction funnels rather than waiting for word-of-mouth.
+              </Text>
+              <Button href="/work/project-1" variant="secondary" arrowIcon style={{ width: 'fit-content', marginTop: '16px' }}>
+                View Meta Strategy
               </Button>
             </Column>
             <Column flex={1} radius="l"
@@ -220,12 +273,19 @@ export default function Home() {
           {/* Project 2 - Linwood (Reversed) */}
           <Flex fillWidth gap="l" wrap paddingY="m" vertical="center" direction="row-reverse" align="start">
             <Column flex={1} gap="m" style={{ minWidth: '300px' }}>
+              <Text variant="label-strong-s" onBackground="brand-strong">SOCIAL PROOF / CONTENT STRATEGY</Text>
               <Heading variant="display-strong-s">Linwood Support</Heading>
-              <Text variant="heading-default-xs" onBackground="neutral-weak">
-                Transforming an invisible brand into a trusted community presence for a local NDIS provider.
+              <Text variant="body-default-m" onBackground="neutral-weak">
+                <strong>Challenge:</strong> Sensitive industry (NDIS) requiring deep trust before the buying moment.
               </Text>
-              <Button href="/work/project-2" variant="secondary" arrowIcon>
-                Read case study
+              <Text variant="body-default-m" onBackground="neutral-weak">
+                <strong>What changed:</strong> Overhauled community presence and trust-building category messaging.
+              </Text>
+              <Text variant="body-default-m" onBackground="neutral-strong">
+                <strong>Why it matters:</strong> Trust-building content clears the pathway to success for paid growth campaigns.
+              </Text>
+              <Button href="/work/project-2" variant="secondary" arrowIcon style={{ width: 'fit-content', marginTop: '16px' }}>
+                View Content Strategy
               </Button>
             </Column>
             <Column flex={1} radius="l"
@@ -246,15 +306,22 @@ export default function Home() {
             </Column>
           </Flex>
 
-          {/* Project 3 - Brooklyn */}
+          {/* Project 3 - Brooklyn Boy Bagels */}
           <Flex fillWidth gap="l" wrap paddingY="m" vertical="center" align="start">
             <Column flex={1} gap="m" style={{ minWidth: '300px' }}>
+              <Text variant="label-strong-s" onBackground="brand-strong">CONVERSION / UX PROOF</Text>
               <Heading variant="display-strong-s">Brooklyn Boy Bagels</Heading>
-              <Text variant="heading-default-xs" onBackground="neutral-weak">
-                Complete UX/UI overhaul for a beloved local bagel brand.
+              <Text variant="body-default-m" onBackground="neutral-weak">
+                <strong>Challenge:</strong> Traffic was landing on a confusing user experience, leaking potential sales.
               </Text>
-              <Button href="/work/project-3" variant="secondary" arrowIcon>
-                Read case study
+              <Text variant="body-default-m" onBackground="neutral-weak">
+                <strong>What changed:</strong> Complete conversion-focused UX overhaul and messaging update.
+              </Text>
+              <Text variant="body-default-m" onBackground="neutral-strong">
+                <strong>Why it matters:</strong> Traffic alone isn't enough. Your website must handle the demand efficiently.
+              </Text>
+              <Button href="/work/project-3" variant="secondary" arrowIcon style={{ width: 'fit-content', marginTop: '16px' }}>
+                View UX Approach
               </Button>
             </Column>
             <Column flex={1} radius="l"
@@ -277,26 +344,52 @@ export default function Home() {
         </Column>
       </Column>
 
-      {/* CTA Section */}
+      {/* Objections / FAQ Section */}
+      <Column fillWidth paddingY="xl" background="surface" align="center" horizontal="center" radius="l">
+        <Column fillWidth maxWidth="l" gap="xl" align="center" horizontal="center" paddingX="l">
+          <Heading variant="heading-strong-l" align="center">Straight answers to sensible questions.</Heading>
+          
+          <Flex fillWidth wrap gap="l" paddingTop="m">
+            <Column flex={1} style={{ minWidth: '300px' }} gap="s">
+               <Heading variant="heading-strong-s">"I've been burned by agencies before."</Heading>
+               <Text variant="body-default-s" onBackground="neutral-weak">I get it. That's why there are no long-term contracts. You stay if it's profitable, you leave if it's not. No hostages.</Text>
+            </Column>
+            <Column flex={1} style={{ minWidth: '300px' }} gap="s">
+               <Heading variant="heading-strong-s">"Are Meta leads just junk?"</Heading>
+               <Text variant="body-default-s" onBackground="neutral-weak">They are if you use default agency settings. We use qualifying forms and friction to filter out tire-kickers so you only speak to people who want to buy.</Text>
+            </Column>
+            <Column flex={1} style={{ minWidth: '300px' }} gap="s">
+               <Heading variant="heading-strong-s">"How do I know I keep my data?"</Heading>
+               <Text variant="body-default-s" onBackground="neutral-weak">You create the ad account and page, you give me access. You can revoke it anytime. Your pixel data stays yours forever.</Text>
+            </Column>
+            <Column flex={1} style={{ minWidth: '300px' }} gap="s">
+               <Heading variant="heading-strong-s">"Will you outsource the work?"</Heading>
+               <Text variant="body-default-s" onBackground="neutral-weak">No. You speak directly to me, and I personally build and manage the campaigns. I take a limited number of clients to ensure quality.</Text>
+            </Column>
+          </Flex>
+        </Column>
+      </Column>
+
+      {/* Final CTA Section */}
       <Column fillWidth maxWidth="m" paddingY="128" gap="l" horizontal="center" align="center">
         <RevealFx translateY="16" speed="fast" delay={0}>
           <Column fillWidth horizontal="center">
             <Heading variant="display-strong-m" align="center" wrap="balance">
-              Ready to grow your business?
+              Ready to see whether Meta can actually work for your business?
             </Heading>
           </Column>
         </RevealFx>
         <RevealFx translateY="16" speed="fast" delay={0.2}>
           <Column fillWidth horizontal="center">
             <Text variant="heading-default-l" onBackground="neutral-weak" align="center" wrap="balance">
-              Let's turn your passive website into a revenue-generating asset.
+              No pressure. No lock-in. Honest fit check.
             </Text>
           </Column>
         </RevealFx>
         <RevealFx translateY="16" speed="fast" delay={0.4}>
-          <Flex fillWidth horizontal="center">
+          <Flex fillWidth horizontal="center" paddingTop="m">
             <Button href="/contact" variant="primary" size="l" arrowIcon>
-              Start a Project
+              Request a Free Meta Ads Audit
             </Button>
           </Flex>
         </RevealFx>

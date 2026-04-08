@@ -31,10 +31,10 @@ export const Header = () => {
                     Home
                 </Button>
                 <Button href="/work" variant="tertiary" weight="default" size="s">
-                    My Projects
+                    Case Studies
                 </Button>
                 <Button href="/contact" variant="primary" size="s">
-                    Start a Project
+                    Request a Free Meta Ads Audit
                 </Button>
             </Flex>
         </Flex>

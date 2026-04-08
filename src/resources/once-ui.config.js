@@ -68,8 +68,8 @@ const dataStyle = {
 const meta = {
   home: {
     path: "/",
-    title: "Ali Saleh - Digital marketer sydney - Your local digital marketer",
-    description: "My personal portfolio showcasing my work and experience.",
+    title: "Meta Ads for Local Service Businesses | No-Contract Management",
+    description: "Specialist no-contract Meta Ads management for local service businesses. Stop feeding the machine and start booking qualified local leads.",
     image: "/images/og/home.jpg",
     canonical: "https://portfolio.com",
     robots: "index,follow",
