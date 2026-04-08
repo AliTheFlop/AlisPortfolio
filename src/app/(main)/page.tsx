@@ -44,7 +44,7 @@ export default function Home() {
           <RevealFx translateY="16" speed="fast" delay={0.4}>
             <Flex gap="m" wrap vertical="center">
               <Button href="/contact" variant="primary" size="l" arrowIcon>
-                Request a Free Meta Ads Audit
+                See If Meta Is a Fit
               </Button>
               <Button href="/work" variant="secondary" size="l" arrowIcon>
                 View Case Studies
@@ -389,7 +389,7 @@ export default function Home() {
         <RevealFx translateY="16" speed="fast" delay={0.4}>
           <Flex fillWidth horizontal="center" paddingTop="m">
             <Button href="/contact" variant="primary" size="l" arrowIcon>
-              Request a Free Meta Ads Audit
+              See If Meta Is a Fit
             </Button>
           </Flex>
         </RevealFx>

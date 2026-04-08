@@ -34,7 +34,7 @@ export const Header = () => {
                     Case Studies
                 </Button>
                 <Button href="/contact" variant="primary" size="s">
-                    Request a Free Meta Ads Audit
+                    See If Meta Is a Fit
                 </Button>
             </Flex>
         </Flex>
